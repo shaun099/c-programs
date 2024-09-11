@@ -2,7 +2,7 @@
 #define MAX 10
 int stack[MAX];
 int top = -1;
-
+// to push value into stack
 void push(int value)
 {
     if (top == MAX - 1)
@@ -16,6 +16,7 @@ void push(int value)
         printf("%d is eneterd\n", value);
     }
 }
+// to remove value out of stack
 void pop()
 {
     if (top < 0)
@@ -29,7 +30,7 @@ void pop()
         printf("%d is poped\n", item);
     }
 }
-
+// to display the elements of stack
 void display()
 {
     if (top < 0)
