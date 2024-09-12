@@ -1,7 +1,19 @@
+/**
+ * @file circular_queue.c
+ * @brief Implementation of a circular queue in C.
+ *
+ * This program provides a menu-driven interface to interact with a circular queue.
+ * The queue is implemented as an array of integers, and the front and rear indices
+ * are used to keep track of the queue's state.
+ */
 #include <stdio.h>
 #define MAX 10
 int circluar[MAX], front = -1, rear = -1;
-// to add to stack
+/**
+ * Enqueues an element into the circular queue.
+ *
+ * value:-The value to be enqueued.
+ */
 void enqueue(int value)
 {
     if (front == -1 && rear == -1)
@@ -22,7 +34,10 @@ void enqueue(int value)
         printf("\n%d added successfully\n", value);
     }
 }
-// to remove from stack
+/**
+ * This function removes an element from the circular queue. If the queue is empty,
+ * it prints an underflow message.
+ */
 void dequeue()
 {
     if (front == -1 && rear == -1)
@@ -41,7 +56,10 @@ void dequeue()
         front = ((front + 1) % MAX);
     }
 }
-// display stack
+/**
+ * This function prints the elements of the circular queue.
+ *
+ */
 void display()
 {
     if (front == -1 && rear == -1)
@@ -62,6 +80,13 @@ void display()
         printf("\n========================\n");
     }
 }
+/**
+ * The main function.
+ *
+ * This function provides a menu-driven interface to interact with the circular queue.
+ *
+ * return 0 on successful execution.
+ */
 int main()
 {
     int choice, value;
@@ -97,3 +122,11 @@ int main()
     }
     return 0;
 }
+/**
+ * @example
+ * To use this program, simply compile and run it. Then, follow the menu-driven interface to interact with the circular queue.
+ * For example, to enqueue an element, select option 1 and enter the value to be added.
+ * To dequeue an element, select option 2.
+ * To display the elements of the queue, select option 3.
+ * To exit the program, select option 4.
+ */
