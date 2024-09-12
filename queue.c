@@ -1,9 +1,22 @@
+/**
+ * @file queue.c
+ * @brief Implementation of a simple queue data structure using an array.
+ *
+ * This program provides a basic implementation of a queue using an array.
+ * It includes functions for enqueue, dequeue, and display operations.
+ *
+ *  OVERFLOW = Queue is full.
+ *  UNDERFLOW = Queue is empty.
+ *
+ */
 #include <stdio.h>
 #define MAX 10
 int queue[MAX];
 int front = -1;
 int rear = -1;
 
+// Enqueues a value into the queue.
+// value:-The value to be enqueued.
 void enqueue(int value)
 {
     if (rear == MAX - 1)
@@ -24,6 +37,8 @@ void enqueue(int value)
         printf("%d is entered\n", value);
     }
 }
+
+// Dequeues a value from the queue.
 void dequeue()
 {
     if (rear == -1 && front == -1)
@@ -45,6 +60,7 @@ void dequeue()
     }
 }
 
+// Displays the contents of the queue.
 void display()
 {
     if (front == -1 && rear == -1)
@@ -63,6 +79,9 @@ void display()
     }
 }
 
+// The main function.
+// This function provides a menu-driven interface for the user to interact with the queue.
+// return 0 on successful exit.
 int main()
 {
     int choice, value;
@@ -93,3 +112,15 @@ int main()
         }
     }
 }
+/**
+ * @example
+ * To use this program, simply compile and run it. Then, follow the menu prompts to enqueue, dequeue, and display values.
+ *
+ * For example, to enqueue the value 5, select option 1 and enter 5 when prompted.
+ *
+ * To dequeue a value, select option 2.
+ *
+ * To display the contents of the queue, select option 3.
+ *
+ * To exit the program, select option 4.
+ */
