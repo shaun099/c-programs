@@ -1,3 +1,12 @@
+/**
+ * Checks if a given integer is an Armstrong number or not.
+ *
+ * An Armstrong number is a number that is equal to the sum of cubes of its digits.
+ *
+ * Example: 371 is an Armstrong number since 3^3 + 7^3 + 1^3 = 371
+ *
+ * return 0 if the program executes successfully, 1 if invalid input is provided
+ */
 #include <stdio.h>
 int main()
 {
