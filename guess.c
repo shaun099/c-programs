@@ -1,3 +1,12 @@
+/**
+ * A simple number guessing game for multiple players.
+ *
+ * This program allows multiple players to play a number guessing game. Each player
+ * is prompted to enter their name and then make guesses until they correctly guess
+ * a randomly generated number between 1 and 99. The program keeps track of the
+ * number of chances each player takes to guess the number, their score, and their
+ * accuracy.
+ */
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
