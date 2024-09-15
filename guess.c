@@ -10,7 +10,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
-void main()
+int main()
 {
     srand(time(0));
     struct pl
@@ -60,4 +60,5 @@ void main()
         printf("\n%s\t%d\t%d\t%f\n", p[i].name, p[i].chance, p[i].score, p[i].acc);
     }
     printf("*************************");
+    return 0;
 }
