@@ -11,11 +11,14 @@ int main()
     printf("enter the 2nd no:");
     scanf("%f", &num2);
     // arithmetic operations
+
+    // addition operation
     if (opr == '+')
     {
         sum = num1 + num2;
         printf("ANS>> %.2f + %.2f = %.2f", num1, num2, sum);
     }
+    // substraction operation
     else if (opr == '-')
     {
         sub = num1 - num2;
@@ -27,12 +30,14 @@ int main()
         {
             printf("division by zero is not possible");
         }
+        // division operation
         else
         {
             div = num1 / num2;
             printf("ANS>> %.2f / %.2f = %.2f", num1, num2, div);
         }
     }
+    // for multiplication operation
     else if (opr == '*')
     {
         mult = num1 * num2;
