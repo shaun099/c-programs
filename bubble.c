@@ -1,5 +1,5 @@
 #include <stdio.h>
-void main()
+int main()
 {
     int i, j, a[10], n, temp;
     printf("enter size of array:\n");
@@ -40,4 +40,5 @@ void main()
     {
         printf("%d\t", a[i]);
     }
+    return 0;
 }
